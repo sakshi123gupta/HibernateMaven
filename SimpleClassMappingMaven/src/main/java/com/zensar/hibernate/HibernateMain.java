@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 import com.zensar.hibernate.entities.Product;
 
 public class HibernateMain {
+	
 	public static void main(String[] args) {
 		Configuration c= new Configuration().configure();
 		SessionFactory f=c.buildSessionFactory();
@@ -21,6 +22,7 @@ public class HibernateMain {
 		p.setPrice(30000);
 		
 		s.save(p);
+		System.out.println("Product is saved");
 		
 		
 		
